@@ -1,5 +1,6 @@
+package misa;
 
-public class Accounts {
+public class Account {
 
     public int id;
     public String firstName;
@@ -8,7 +9,7 @@ public class Accounts {
     public String username;
     public String password;
 
-    public Accounts(int id, String firstName, String lastName, String email, String username, String password) {
+    public Account(int id, String firstName, String lastName, String email, String username, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,45 +1,40 @@
 package misa;
 
-import java.util.Scanner;
-
 public class Grade {
-    public void getGrade(){
-        Scanner input = new Scanner(System.in);
-        
-        String name;
-        int Math, Science, English, Computer;
-        int TotalMarks;
-        float Ave;
-        
-        
-        System.out.print("\nEnter your full name: ");
-        name = input.nextLine();
-        System.out.println("\nEnter Marks in: ");
-        System.out.print("Math:  ");
-        Math = input.nextInt();
-        System.out.print("Science:  ");
-        Science = input.nextInt();
-        System.out.print("English:  ");
-        English = input.nextInt();
-        System.out.print("Computer:  ");
-        Computer = input.nextInt();
-        
-        System.out.println("------------------------------");
-        System.out.println("Grade Detail");
-        System.out.println("------------------------------");
-        
-        System.out.println("Name:"+name);
-        
-        TotalMarks = Math+Science+English+Computer;
-        
-        System.out.println("Total Marks:"+ TotalMarks);
-        
-        Ave = TotalMarks/4;
-        
-        System.out.println("Average:"+Ave);
-        
-         
-       
-    }
+    String name;
+    int math;
+    int science;
+    int english;
+    int computer;
+    int totalMarks;
+    float average;
+
     
+    public Grade(String name, int math, int science, int english, int computer) {
+        this.name = name;
+        this.math = math;
+        this.science = science;
+        this.english = english;
+        this.computer = computer;
+        this.totalMarks = math + science + english + computer;
+        this.average = totalMarks / 4.0f;
+    }
+
+    public Grade(int id, String name, double prelim, double midterm, double preFinal, double finalExam) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void viewGrades() {
+        System.out.println("------------------------------");
+        System.out.println("Grade Details");
+        System.out.println("------------------------------");
+        System.out.println("Name: " + name);
+        System.out.println("Math: " + math);
+        System.out.println("Science: " + science);
+        System.out.println("English: " + english);
+        System.out.println("Computer: " + computer);
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average: " + average);
+        System.out.println("------------------------------");
+    }
 }
